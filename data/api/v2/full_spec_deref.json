@@ -5351,6 +5351,44 @@
             "description": "ID of the role.",
             "type": "string"
           },
+          "relationships": {
+            "description": "Relationships of role object to update.",
+            "properties": {
+              "permissions": {
+                "description": "Relationship to multiple permissions objects.",
+                "properties": {
+                  "data": {
+                    "description": "Relationships to permission objects.",
+                    "items": {
+                      "description": "Relationship to permission object.",
+                      "properties": {
+                        "id": {
+                          "description": "ID of the permission.",
+                          "type": "string"
+                        },
+                        "type": {
+                          "default": "permissions",
+                          "description": "Permissions resource type.",
+                          "enum": [
+                            "permissions"
+                          ],
+                          "example": "permissions",
+                          "type": "string",
+                          "x-enum-varnames": [
+                            "PERMISSIONS"
+                          ]
+                        }
+                      },
+                      "type": "object"
+                    },
+                    "type": "array"
+                  }
+                },
+                "type": "object"
+              }
+            },
+            "type": "object"
+          },
           "type": {
             "default": "roles",
             "description": "Roles type.",
@@ -5362,6 +5400,44 @@
             "x-enum-varnames": [
               "ROLES"
             ]
+          }
+        },
+        "type": "object"
+      },
+      "RoleUpdateRelationships": {
+        "description": "Relationships of role object to update.",
+        "properties": {
+          "permissions": {
+            "description": "Relationship to multiple permissions objects.",
+            "properties": {
+              "data": {
+                "description": "Relationships to permission objects.",
+                "items": {
+                  "description": "Relationship to permission object.",
+                  "properties": {
+                    "id": {
+                      "description": "ID of the permission.",
+                      "type": "string"
+                    },
+                    "type": {
+                      "default": "permissions",
+                      "description": "Permissions resource type.",
+                      "enum": [
+                        "permissions"
+                      ],
+                      "example": "permissions",
+                      "type": "string",
+                      "x-enum-varnames": [
+                        "PERMISSIONS"
+                      ]
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": "array"
+              }
+            },
+            "type": "object"
           }
         },
         "type": "object"
@@ -5397,6 +5473,44 @@
               "id": {
                 "description": "ID of the role.",
                 "type": "string"
+              },
+              "relationships": {
+                "description": "Relationships of role object to update.",
+                "properties": {
+                  "permissions": {
+                    "description": "Relationship to multiple permissions objects.",
+                    "properties": {
+                      "data": {
+                        "description": "Relationships to permission objects.",
+                        "items": {
+                          "description": "Relationship to permission object.",
+                          "properties": {
+                            "id": {
+                              "description": "ID of the permission.",
+                              "type": "string"
+                            },
+                            "type": {
+                              "default": "permissions",
+                              "description": "Permissions resource type.",
+                              "enum": [
+                                "permissions"
+                              ],
+                              "example": "permissions",
+                              "type": "string",
+                              "x-enum-varnames": [
+                                "PERMISSIONS"
+                              ]
+                            }
+                          },
+                          "type": "object"
+                        },
+                        "type": "array"
+                      }
+                    },
+                    "type": "object"
+                  }
+                },
+                "type": "object"
               },
               "type": {
                 "default": "roles",
@@ -15023,6 +15137,44 @@
                       "id": {
                         "description": "ID of the role.",
                         "type": "string"
+                      },
+                      "relationships": {
+                        "description": "Relationships of role object to update.",
+                        "properties": {
+                          "permissions": {
+                            "description": "Relationship to multiple permissions objects.",
+                            "properties": {
+                              "data": {
+                                "description": "Relationships to permission objects.",
+                                "items": {
+                                  "description": "Relationship to permission object.",
+                                  "properties": {
+                                    "id": {
+                                      "description": "ID of the permission.",
+                                      "type": "string"
+                                    },
+                                    "type": {
+                                      "default": "permissions",
+                                      "description": "Permissions resource type.",
+                                      "enum": [
+                                        "permissions"
+                                      ],
+                                      "example": "permissions",
+                                      "type": "string",
+                                      "x-enum-varnames": [
+                                        "PERMISSIONS"
+                                      ]
+                                    }
+                                  },
+                                  "type": "object"
+                                },
+                                "type": "array"
+                              }
+                            },
+                            "type": "object"
+                          }
+                        },
+                        "type": "object"
                       },
                       "type": {
                         "default": "roles",

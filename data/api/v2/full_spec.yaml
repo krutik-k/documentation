@@ -1274,8 +1274,16 @@ components:
         id:
           description: ID of the role.
           type: string
+        relationships:
+          $ref: '#/components/schemas/RoleUpdateRelationships'
         type:
           $ref: '#/components/schemas/RolesType'
+      type: object
+    RoleUpdateRelationships:
+      description: Relationships of role object to update.
+      properties:
+        permissions:
+          $ref: '#/components/schemas/RelationshipToPermissions'
       type: object
     RoleUpdateRequest:
       description: Update a role.
